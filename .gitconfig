@@ -1,0 +1,9 @@
+[user]
+	email = treportelie12@gmail.com
+	name = Tykok
+[core]
+	autocrlf = true
+[init]
+	defaultBranch = main
+[alias]
+	co = checkout
