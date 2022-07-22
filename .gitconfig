@@ -3,7 +3,11 @@
 	name = Tykok
 [core]
 	autocrlf = true
+	editor = code --wait
 [init]
 	defaultBranch = main
 [alias]
 	co = checkout
+	commit-message-change = commit --amend -m
+[commit]
+  template = ~/.gitmessage

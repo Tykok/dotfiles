@@ -35,8 +35,12 @@ windows
 .yarnrc
 .zcompdump-MSI-5.8
 .zsh_history
-.zshrc
 .gnupg
 .profile
 .vuerc
 Projet
+env
+*__pycache__*
+old-dotfiles
+.zshrc
+zshrc
