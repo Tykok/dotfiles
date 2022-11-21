@@ -1,10 +1,10 @@
 # Python
-python-create-env() { 
-  python$1 -m venv env && source env/bin/activate 
+python-create-env() {
+  python$1 -m venv env && source env/bin/activate
 }
 
-pip-save(){ 
-  pip install $1 && pip freeze > requirements.txt 
+pip-save(){
+  pip install $1 && pip freeze > requirements.txt
 }
 
 alias python3.9-create-env="python3.9 -m venv env && source env/bin/activate"
@@ -20,6 +20,8 @@ alias python-activate="source env/bin/activate"
 # Git
 git-alias(){ git config --global alias.$1 $2 }
 
+# dotnet
+dotnet6-new(){ mkdir $1 && cd $1 && dotnet new console --framework net6.0 }
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
