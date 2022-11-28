@@ -9,6 +9,6 @@
 [alias]
 	co = checkout
 	commit-message-change = commit --amend -m
-	branch-current = git rev-parse --abbrev-ref HEAD
+	branch-current = rev-parse --abbrev-ref HEAD
 [commit]
   template = ~/.gitmessage
