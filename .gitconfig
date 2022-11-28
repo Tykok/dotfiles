@@ -2,12 +2,13 @@
 	email = treportelie12@gmail.com
 	name = Tykok
 [core]
-	autocrlf = true
+	autocrlf = false
 	editor = code --wait
 [init]
 	defaultBranch = main
 [alias]
 	co = checkout
 	commit-message-change = commit --amend -m
+	branch-current = git rev-parse --abbrev-ref HEAD
 [commit]
   template = ~/.gitmessage
