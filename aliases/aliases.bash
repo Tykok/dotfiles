@@ -10,7 +10,7 @@ pip-save(){
 alias python3.9-create-env="python3.9 -m venv env && source env/bin/activate"
 pip-save(){ pip install $1 && pip freeze > requirements.txt }
 alias python-activate="source env/bin/activate"
-
+alias pip-install="pip install -r requirements.txt"
 # PlantUML
 # alias plantuml='java -jar /home/tykok/bin/plantuml/plantuml.jar'
 
