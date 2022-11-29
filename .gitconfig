@@ -10,5 +10,7 @@
 	co = checkout
 	commit-message-change = commit --amend -m
 	branch-current = rev-parse --abbrev-ref HEAD
+	amend = commit --amend
+	amend-m = commit --amend -m $1
 [commit]
   template = ~/.gitmessage
