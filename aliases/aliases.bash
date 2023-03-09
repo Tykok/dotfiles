@@ -24,7 +24,8 @@ alias gaa='git add .'
 alias gc='git commit'
 alias gcm='git commit -m'
 alias current-branch='git rev-parse --abbrev-ref HEAD'
-alias git_amend_and_push='git add . && git commit --amend && git push origin $(git rev-parse --abbrev-ref HEAD) -f'
+alias git_add_amend='git add . && git commit --amend'
+alias git_amend_and_push='git_add_amend && git push origin $(git rev-parse --abbrev-ref HEAD) -f'
 
 # dotnet
 dotnet6-new(){ mkdir $1 && cd $1 && dotnet new console --framework net6.0 }
