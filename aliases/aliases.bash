@@ -19,14 +19,17 @@ alias pip-install="pip install -r requirements.txt"
 
 # Git
 git-alias(){ git config --global alias.$1 $2 }
-alias ga='git add'
-alias gaa='git add .'
-alias gc='git commit'
-alias gcm='git commit -m'
-alias g-log-one='git log --oneline'
-alias current-branch='git rev-parse --abbrev-ref HEAD'
-alias git_add_amend='git add . && git commit --amend'
-alias git_amend_and_push='git_add_amend && git push origin $(git rev-parse --abbrev-ref HEAD) -f'
+alias git-a='git add'
+alias git-aa='git add .'
+alias git-c='git commit'
+alias git-cm='git commit -m'
+alias git-log1='git log --oneline'
+alias git-log-graph="git log --graph --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%an%C(reset)%C(bold yellow)%d%C(reset) %C(dim white)- %s%C(reset)' --all"
+alias git-push='git push origin $(git-current-branch)'
+alias git-current-branch='git rev-parse --abbrev-ref HEAD'
+alias git-add-amend='git add . && git commit --amend'
+alias git-amend-and-push='git-add-amend && git push origin $(git rev-parse --abbrev-ref HEAD) -f'
+alias git-rebase-from-develop='git fetch origin && git rebase origin/develop'
 
 # dotnet
 dotnet6-new(){ mkdir $1 && cd $1 && dotnet new console --framework net6.0 }
@@ -39,3 +42,6 @@ export NVM_DIR="$HOME/.nvm"
 # Others and commons
 alias agu='sudo apt-get update'
 alias zsh-update='source ~/.zshrc'
+search-port() {
+	eval "lsof -i tcp:$1"
+}
