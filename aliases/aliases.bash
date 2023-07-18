@@ -1,4 +1,5 @@
 # Python
+export PYENV_ROOT="$HOME/.pyenv"
 python-create-env() {
   python$1 -m venv env && source env/bin/activate
 }
@@ -28,6 +29,7 @@ alias git-log-graph="git log --graph --format=format:'%C(bold blue)%h%C(reset) -
 alias git-push='git push origin $(git-current-branch)'
 alias git-current-branch='git rev-parse --abbrev-ref HEAD'
 alias git-add-amend='git add . && git commit --amend'
+alias git-add-amend-noedit='git add . && git commit --amend --no-edit'
 alias git-amend-and-push='git-add-amend && git push origin $(git rev-parse --abbrev-ref HEAD) -f'
 alias git-rebase-from-develop='git fetch origin && git rebase origin/develop'
 
