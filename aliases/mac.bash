@@ -16,3 +16,5 @@ alias postgres-proxy-reset-and-run="rm -rf /tmp/cloudsql && postgres-proxy-creat
 alias postgres-proxy="cloud-sql-proxy picta-int:us-central1:postgre-mvp 'picta-int:us-central1:postgre-mvp?unix-socket=/tmp/cloudsql'"
 alias postgres-proxy-create-and-run="sudo mkdir /tmp/cloudsql; sudo chmod 777 /tmp/cloudsql && postgres-proxy"
 alias postgres-proxy-prd="cloud-sql-proxy picta-prd:us-central1:postgre13-prd 'picta-int:us-central1:postgre-mvp?unix-socket=/tmp/cloudsql'"
+
+export PGPASSFILE='/Users/elietreport/.pgpass'

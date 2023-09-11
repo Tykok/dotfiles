@@ -31,6 +31,7 @@ alias git-current-branch='git rev-parse --abbrev-ref HEAD'
 alias git-add-amend='git add . && git commit --amend'
 alias git-add-amend-noedit='git add . && git commit --amend --no-edit'
 alias git-amend-and-push='git-add-amend && git push origin $(git rev-parse --abbrev-ref HEAD) -f'
+alias git-amend-noedit-and-push='git-add-amend-noedit && git push origin $(git rev-parse --abbrev-ref HEAD) -f'
 alias git-rebase-from-develop='git fetch origin && git rebase origin/develop'
 
 # dotnet
