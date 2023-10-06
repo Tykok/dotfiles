@@ -2,11 +2,18 @@
 # SOURCE
 ########################################################################################################
 
-source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
-source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
+# source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
+# source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
+eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(oh-my-posh init zsh)"
 
 fpath=(~/.stripe $fpath)
 autoload -Uz compinit && compinit -i
+
+## EXA
+alias ls='exa --icons --group-directories-first'
+alias ll='exa -l --icons --no-user --group-directories-first  --time-style long-iso'
+alias la='exa -la --icons --no-user --group-directories-first  --time-style long-iso'
 
 ########################################################################################################
 ########################################################################################################
